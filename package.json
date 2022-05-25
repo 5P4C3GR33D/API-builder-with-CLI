@@ -1,0 +1,14 @@
+{
+  "name": "api-builder",
+  "version": "1.0.0",
+  "description": "A CLI to create basic files for API of choosen domain",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "author": "5P4C3GR33D",
+  "license": "ISC"
+}
