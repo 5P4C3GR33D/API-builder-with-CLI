@@ -1,14 +1,31 @@
 {
-  "name": "api-builder",
-  "version": "1.0.0",
-  "description": "A CLI to create basic files for API of choosen domain",
+  "name": "api-builder-with-cli",
+  "version": "1.0.1",
+  "description": "CLI to create whole backend app, or just some of it's parts.",
   "main": "index.js",
+  "bin": {
+    "apicli": "index.js"
+  },
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "cli"
-  ],
-  "author": "5P4C3GR33D",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/5P4C3GR33D/API-builder-with-CLI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/5P4C3GR33D/API-builder-with-CLI/issues"
+  },
+  "homepage": "https://github.com/5P4C3GR33D/API-builder-with-CLI#readme",
+  "dependencies": {
+    "commander": "^9.3.0",
+    "handlebars": "^4.7.7",
+    "pluralize": "^8.0.0"
+  }
 }

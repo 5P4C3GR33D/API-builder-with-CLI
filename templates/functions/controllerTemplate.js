@@ -1,17 +1,18 @@
-const DomainService = require('./Domain.service')
+const template = `
+const {{domain}}Service = require('./{{domain}}.service')
 
 /**
- * This Controller has methods that help to work with Domain.
+ * This Controller has methods that help to work with {{domain}}.
  *
- * @module Domain
+ * @module {{domain}}
  */
 
-class DomainController {
-  constructor() { }
+class {{domain}}Controller {
+  constructor() {}
 
-  async typeDomain(request, response) {
-    const { props } = request.body
-    if (!props) {
+  async {{apiName}}(request, response) {
+    const { {{props}} } = request.body
+    if (!{{props}}) {
       /**
        * Handling of errors
        */
@@ -33,11 +34,11 @@ class DomainController {
     }
 
     try {
-      // Creating new instance of DomainService.
-      const domainService = new DomainService()
+      // Creating new instance of {{domain}}Service.
+      const {{lowercaseDomain}}Service = new {{domain}}Service()
 
       //Calling created API
-      responseObject.data = await domainService.typeDomain(props)
+      responseObject.data = await {{domain}}Service.{{apiName}}(props)
 
       // end of function
       return response.status(200).send(responseObject)
@@ -51,4 +52,6 @@ class DomainController {
   }
 }
 
-module.exports = DomainController
+module.exports = {{domain}}Controller
+`
+module.exports = template

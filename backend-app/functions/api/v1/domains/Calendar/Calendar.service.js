@@ -1,12 +1,14 @@
-//Please, change route path according to your environment
+
 const BaseService = require('../../utils/Base.service')
 
-class DomainService extends BaseService {
+const { CALENDARS_COLLECTION } = require('../../constants/collections')
+
+class CalendarService extends BaseService {
   constructor() {
     super()
   }
 
-  async typeDomainData(props) {
+  async getCalendarData(id,name,clinicId) {
     try {
      /**
       * Type here
@@ -17,4 +19,4 @@ class DomainService extends BaseService {
   }
 }
 
-module.exports = DomainService
+module.exports = CalendarService
